@@ -1,6 +1,6 @@
 function Ban(props){
     return (
-        <div className={props.side+" each-ban"}>
+        <div className={props.side+" ban"}>
 
         </div>
     )
