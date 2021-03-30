@@ -1,0 +1,91 @@
+div{
+  display: flex;
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+html,body,#root,.App{
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  flex-direction: column;
+}
+
+.scoreboard{
+  width: 100%;
+  height: 15%;
+  background-color: aqua;
+}
+
+.banpicks{
+  width: 100%;
+  height: 85%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.banpick{
+  background-color: transparent;
+  height: 100%;
+  width: 20%;
+  flex-direction: column;
+}
+
+.pick{
+  background-color: crimson;
+  height: 90%;
+  width: 100%;
+  flex-direction: column;
+}
+
+.each-pick{
+  height: 20%;
+  width: 100%;
+}
+.each-pick:nth-child(1),.each-ban:nth-child(1){
+  background-color: red;
+}
+.each-pick:nth-child(2),.each-ban:nth-child(2){
+  background-color: yellow;
+}
+.each-pick:nth-child(3),.each-ban:nth-child(3){
+  background-color: green;
+}
+.each-pick:nth-child(4),.each-ban:nth-child(4){
+  background-color: blue;
+}
+.each-pick:nth-child(5),.each-ban:nth-child(6){
+  background-color: violet;
+}
+
+.ban{
+  background-color: transparent;
+  height: 10%;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.red.ban{
+  flex-direction: row-reverse;
+}
+
+.each-ban{
+  height: 100%;
+  width: 17%;
+  background-color: chocolate;
+}
+
+.ban-blank{
+  width: 4%;
+}
+
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
