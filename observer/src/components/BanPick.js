@@ -8,20 +8,20 @@ function BanPick(props){
             <div className={props.side+' picks'}>
                 {
                     [1,2,3,4,5].map((n)=>{
-                        return (<Pick side={props.side} pickNum={n}></Pick>)
+                        return (<Pick side={props.side} pickNum={n} doing={false}></Pick>)
                     })
                 }
             </div>
             <div className={props.side+' bans'}>
                 {
                     [1,2,3].map((n)=>{
-                        return (<Ban side={props.side} banNum={n}></Ban>)
+                        return (<Ban side={props.side} banNum={n} doing={false}></Ban>)
                     })
                 }
                 <div className={props.side+' ban-blank'}></div>
                 {
                     [4,5].map((n)=>{
-                        return (<Ban side={props.side} banNum={n}></Ban>)
+                        return (<Ban side={props.side} banNum={n} doing={false}></Ban>)
                     })
                 }
             </div>
