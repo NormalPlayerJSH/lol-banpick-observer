@@ -154,6 +154,7 @@ import Sett from './afterCrop/Sett.jpg'
 import Lillia from './afterCrop/Lillia.jpg'
 
 let champs={
+    None:Annie,
     Annie:Annie,
     Olaf:Olaf,
     Galio:Galio,
