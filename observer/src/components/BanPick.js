@@ -8,7 +8,7 @@ function BanPick(props){
             <div className={props.side+' picks'}>
                 {
                     [1,2,3,4,5].map((n)=>{
-                        return (<Pick side={props.side} pickNum={n} doing={false}></Pick>)
+                        return (<Pick side={props.side} pickNum={n} doing={(n===5?true:false)}></Pick>)
                     })
                 }
             </div>
