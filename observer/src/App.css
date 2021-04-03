@@ -16,6 +16,7 @@ html,body,#root,.App{
   border: 0;
   margin: 0;
   flex-direction: column;
+  font-family: 'NanumSquare', sans-serif;
 }
 
 .scoreboard{
@@ -160,4 +161,62 @@ img{
 
 .not-selected > img{
   display: none;
+}
+
+.champ-info{
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  z-index: 5;
+  align-items: center;
+}
+.top-blank{
+  height: 10%;
+}
+.champ-name-div{
+  width: 90%;
+  height: 20%;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.red .champ-name-div{
+  align-items: flex-start;
+}
+
+.champ-name{
+  height: 100%;
+  color: white;
+  font-weight: 800;
+  text-shadow: -1px 0 #000,
+	       0 1px #000,
+	       1px 0 #000,
+	       0 -1px #000;
+}
+
+.middle-blank{
+  height: 40%;
+}
+
+.user-name-div{
+  width: 90%;
+  height: 20%;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.red .user-name-div{
+  align-items: flex-start;
+}
+
+.user-name{
+  color: white;
+  font-weight: 800;
+  font-size:xx-large;
+  text-shadow: -1px 0 #000,
+	       0 1px #000,
+	       1px 0 #000,
+	       0 -1px #000;
+
 }

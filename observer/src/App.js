@@ -4,28 +4,31 @@ import './App.css';
 import { useState } from 'react'
 function App() {
   let [data,setData]=useState({
+    common:{
+      lang:"korean"
+    },
     nowDoing:{
       remainTime:10,
       action:"BAN",
       target:{
-        team:"red",
+        team:"blue",
         pickNum:5
       }
     },
     "blue":{
       name:"블루팀 이름",
       1:{
-        pickChampId:39,
+        pickChampId:150,
         banChampId:517,
-        name:"블루팀 1픽"
+        name:"가나다라마바사아"
       },
       2:{
-        pickChampId:77,
+        pickChampId:106,
         banChampId:142,
         name:"블루팀 2픽"
       },
       3:{
-        pickChampId:4,
+        pickChampId:61,
         banChampId:58,
         name:"블루팀 3픽"
       },
@@ -35,7 +38,7 @@ function App() {
         name:"블루팀 4픽"
       },
       5:{
-        pickChampId:3,
+        pickChampId:-1,
         banChampId:113,
         name:"블루팀 5픽"
       }
@@ -43,9 +46,9 @@ function App() {
     red:{
       name:"레드팀 이름",
       1:{
-        pickChampId:150,
+        pickChampId:84,
         banChampId:235,
-        name:"레드팀 1픽"
+        name:"abcdefghijklmnop"
       },
       2:{
         pickChampId:120,
@@ -53,7 +56,7 @@ function App() {
         name:"레드팀 2픽"
       },
       3:{
-        pickChampId:61,
+        pickChampId:142,
         banChampId:412,
         name:"레드팀 3픽"
       },
