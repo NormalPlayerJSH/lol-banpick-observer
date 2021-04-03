@@ -1,4 +1,4 @@
-import champs from '../champ_img'
+import champs from '../img/champ_img'
 import idToChamp from './idToChamp'
 
 function Ban(props){

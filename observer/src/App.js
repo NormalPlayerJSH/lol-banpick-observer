@@ -8,7 +8,8 @@ function App() {
       lang:"korean",
       show:{
         champName:true,
-        userName:true
+        userName:true,
+        spells:true
       }
     },
     nowDoing:{
@@ -23,27 +24,47 @@ function App() {
       name:"블루팀 이름",
       1:{
         pickChampId:150,
-        banChampId:517,
-        name:"가나다라마바사아"
+        banChampId:235,
+        spells:{
+          1:12,
+          2:4
+        },
+        name:"일이삼사오육칠팔"
       },
       2:{
         pickChampId:106,
-        banChampId:142,
+        banChampId:412,
+        spells:{
+          1:11,
+          2:4
+        },
         name:"블루팀 2픽"
       },
       3:{
         pickChampId:61,
-        banChampId:58,
+        banChampId:4,
+        spells:{
+          1:12,
+          2:4
+        },
         name:"블루팀 3픽"
       },
       4:{
         pickChampId:81,
-        banChampId:526,
+        banChampId:429,
+        spells:{
+          1:1,
+          2:4
+        },
         name:"블루팀 4픽"
       },
       5:{
         pickChampId:-1,
-        banChampId:113,
+        banChampId:3,
+        spells:{
+          1:3,
+          2:4
+        },
         name:"블루팀 5픽"
       }
     },
@@ -51,27 +72,47 @@ function App() {
       name:"레드팀 이름",
       1:{
         pickChampId:84,
-        banChampId:235,
+        banChampId:77,
+        spells:{
+          1:12,
+          2:4
+        },
         name:"abcdefghijklmnop"
       },
       2:{
         pickChampId:120,
         banChampId:147,
+        spells:{
+          1:11,
+          2:6
+        },
         name:"레드팀 2픽"
       },
       3:{
         pickChampId:142,
-        banChampId:412,
+        banChampId:201,
+        spells:{
+          1:12,
+          2:4
+        },
         name:"레드팀 3픽"
       },
       4:{
-        pickChampId:18,
-        banChampId:110,
+        pickChampId:110,
+        banChampId:18,
+        spells:{
+          1:4,
+          2:7
+        },
         name:"레드팀 4픽"
       },
       5:{
-        pickChampId:12,
+        pickChampId:89,
         banChampId:-1,
+        spells:{
+          1:14,
+          2:4
+        },
         name:"레드팀 5픽"
       }
     }

@@ -125,7 +125,7 @@ html,body,#root,.App{
   width: 4%;
 }
 
-img{
+.champ-img img{
   width: 100%;
   height: 100%;
   object-fit:cover;
@@ -170,7 +170,7 @@ img{
   z-index: 5;
   align-items: center;
 }
-.top-blank{
+.info-child.top-blank{
   height: 10%;
 }
 .champ-name-div{
@@ -191,7 +191,7 @@ img{
   text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
 }
 
-.middle-blank{
+.info-child.middle-blank{
   height: 40%;
 }
 
@@ -216,4 +216,37 @@ img{
 
 .dont-show{
   display: none;
+}
+
+.spell-info{
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  z-index: 5;
+  align-items: center;
+}
+
+.spell-child.top-blank{
+  height: 17.5%;
+}
+
+.spell-child.middle-blank{
+  height: 5%;
+}
+
+.spell-div{
+  width: 95%;
+  height: 30%;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.red .spell-div{
+  align-items: flex-end;
+}
+
+.spell-img{
+  position: relative;
+  width: auto;
+  height: 100%;
 }

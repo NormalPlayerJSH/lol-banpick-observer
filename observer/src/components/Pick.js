@@ -1,11 +1,16 @@
-import champs from '../champ_img'
+import champs from '../img/champ_img'
+import spells from '../img/spell'
 import idToChamp from './idToChamp'
 import idToName from './idToName'
+import idToSpell from './idToSpell'
 
 function Pick(props){
     let {side,pickNum,data}=props
     function getImg(){
         return champs[idToChamp[data[side][pickNum].pickChampId]]
+    }
+    function getSpellImg(num){
+        return spells[idToSpell[data[side][pickNum]['spells'][num]]]
     }
     function isDoing(){
         return data.nowDoing.action==="PICK" 
@@ -39,6 +44,16 @@ function Pick(props){
                 <div className="info-child middle-blank"></div>
                 <div className="info-child user-name-div">
                     <div className={"user-name"+(isShow("userName")?"":" dont-show")}>{getUserName()}</div>
+                </div>
+            </div>
+            <div className="pick-child spell-info">
+                <div className="spell-child top-blank"></div>
+                <div className="spell-child spell-div">
+                    <img src={getSpellImg(1)} alt="" className={"spell-img"+(isShow("spells")?"":" dont-show")}/>
+                </div>
+                <div className="spell-child middle-blank"></div>
+                <div className="spell-child spell-div">
+                    <img src={getSpellImg(2)} alt="" className={"spell-img"+(isShow("spells")?"":" dont-show")}/>
                 </div>
             </div>
             <div className={"pick-child now"+(isDoing()?" doing":"")}>
