@@ -22,6 +22,9 @@ function Pick(props){
     function getUserName(){
         return data[side][pickNum].name
     }
+    function isShow(name){
+        return data.common.show[name]
+    }
 
     return (
         <div className={side+" pick"}>
@@ -31,11 +34,11 @@ function Pick(props){
             <div className="pick-child champ-info">
                 <div className="info-child top-blank"></div>
                 <div className="info-child champ-name-div">
-                    <div className="champ-name">{getChampName()}</div>
+                    <div className={"champ-name"+(isShow("champName")?"":" dont-show")}>{getChampName()}</div>
                 </div>
                 <div className="info-child middle-blank"></div>
                 <div className="info-child user-name-div">
-                    <div className="user-name">{getUserName()}</div>
+                    <div className={"user-name"+(isShow("userName")?"":" dont-show")}>{getUserName()}</div>
                 </div>
             </div>
             <div className={"pick-child now"+(isDoing()?" doing":"")}>

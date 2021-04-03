@@ -188,10 +188,7 @@ img{
   height: 100%;
   color: white;
   font-weight: 800;
-  text-shadow: -1px 0 #000,
-	       0 1px #000,
-	       1px 0 #000,
-	       0 -1px #000;
+  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
 }
 
 .middle-blank{
@@ -214,9 +211,9 @@ img{
   color: white;
   font-weight: 800;
   font-size:xx-large;
-  text-shadow: -1px 0 #000,
-	       0 1px #000,
-	       1px 0 #000,
-	       0 -1px #000;
+  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+}
 
+.dont-show{
+  display: none;
 }

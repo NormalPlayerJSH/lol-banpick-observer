@@ -5,11 +5,15 @@ import { useState } from 'react'
 function App() {
   let [data,setData]=useState({
     common:{
-      lang:"korean"
+      lang:"korean",
+      show:{
+        champName:true,
+        userName:true
+      }
     },
     nowDoing:{
       remainTime:10,
-      action:"BAN",
+      action:"PICK",
       target:{
         team:"blue",
         pickNum:5
