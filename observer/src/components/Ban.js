@@ -1,27 +1,25 @@
 import champs from '../img/champ_img'
 import idToChamp from './idToChamp'
 
-function Ban(props){
-    let {side,banNum,data}=props
-    function getImg(){
-        return champs[idToChamp[data[side][banNum].banChampId]]
+function Ban(props) {
+    let { side, banNum, data } = props
+    function getImg() {
+        return champs[idToChamp[data[side][banNum].ban.id]]
     }
-    function isDoing(){
-        return data.nowDoing.action==="BAN" 
-        && data.nowDoing.target.team===side 
-        && parseInt(data.nowDoing.target.pickNum)===banNum
+    function isDoing() {
+        return data[side][banNum].ban.isDoing
     }
-    function isNotSelected(){
+    function isNotSelected() {
         //return true
-        return parseInt(data[side][banNum].banChampId)===-1
+        return parseInt(data[side][banNum].ban.id) === -1
     }
 
     return (
-        <div className={props.side+" ban"}>
-            <div className={"ban-child champ-img"+(isNotSelected()?" not-selected":"")}>
-                <img src={getImg()} alt=""/>
+        <div className={props.side + " ban"}>
+            <div className={"ban-child champ-img" + (isNotSelected() ? " not-selected" : "")}>
+                <img src={getImg()} alt="" />
             </div>
-            <div className={"ban-child now"+(isDoing()?" doing":"")}>
+            <div className={"ban-child now" + (isDoing() ? " doing" : "")}>
                 <div className="blink"></div>
                 <div className="dark"></div>
             </div>

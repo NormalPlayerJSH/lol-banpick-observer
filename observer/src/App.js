@@ -3,117 +3,170 @@ import BanPick from "./components/BanPick"
 import './App.css';
 import { useState } from 'react'
 function App() {
-  let [data,setData]=useState({
-    common:{
-      lang:"korean",
-      show:{
-        champName:true,
-        userName:true,
-        spells:true
+  let [data, setData] = useState({
+    common: {
+      lang: "korean",
+      show: {
+        champName: true,
+        userName: true,
+        spells: true
+      },
+      remainTime: 10
+    },
+    "blue": {
+      name: "블루팀 이름",
+      1: {
+        pick: {
+          id: 150,
+          isDoing: false
+        },
+        ban: {
+          id: 235,
+          isDoing: false
+        },
+        spells: {
+          1: 12,
+          2: 4
+        },
+        name: "일이삼사오육칠팔"
+      },
+      2: {
+        pick: {
+          id: 106,
+          isDoing: false
+        },
+        ban: {
+          id: 412,
+          isDoing: false
+        },
+        spells: {
+          1: 11,
+          2: 4
+        },
+        name: "블루팀 2픽"
+      },
+      3: {
+        pick: {
+          id: 61,
+          isDoing: false
+        },
+        ban: {
+          id: 4,
+          isDoing: false
+        },
+        spells: {
+          1: 12,
+          2: 4
+        },
+        name: "블루팀 3픽"
+      },
+      4: {
+        pick: {
+          id: 81,
+          isDoing: true
+        },
+        ban: {
+          id: 429,
+          isDoing: false
+        },
+        spells: {
+          1: 1,
+          2: 4
+        },
+        name: "블루팀 4픽"
+      },
+      5: {
+        pick: {
+          id: -1,
+          isDoing: true
+        },
+        ban: {
+          id: 3,
+          isDoing: false
+        },
+        spells: {
+          1: 3,
+          2: 4
+        },
+        name: "블루팀 5픽"
       }
     },
-    nowDoing:{
-      remainTime:10,
-      action:"PICK",
-      target:{
-        team:"blue",
-        pickNum:5
-      }
-    },
-    "blue":{
-      name:"블루팀 이름",
-      1:{
-        pickChampId:150,
-        banChampId:235,
-        spells:{
-          1:12,
-          2:4
+    red: {
+      name: "레드팀 이름",
+      1: {
+        pick: {
+          id: 84,
+          isDoing: false
         },
-        name:"일이삼사오육칠팔"
+        ban: {
+          id: 77,
+          isDoing: false
+        },
+        spells: {
+          1: 12,
+          2: 4
+        },
+        name: "abcdefghijklmnop"
       },
-      2:{
-        pickChampId:106,
-        banChampId:412,
-        spells:{
-          1:11,
-          2:4
+      2: {
+        pick: {
+          id: 120,
+          isDoing: false
         },
-        name:"블루팀 2픽"
+        ban: {
+          id: 147,
+          isDoing: false
+        },
+        spells: {
+          1: 11,
+          2: 6
+        },
+        name: "레드팀 2픽"
       },
-      3:{
-        pickChampId:61,
-        banChampId:4,
-        spells:{
-          1:12,
-          2:4
+      3: {
+        pick: {
+          id: 142,
+          isDoing: false
         },
-        name:"블루팀 3픽"
+        ban: {
+          id: 201,
+          isDoing: false
+        },
+        spells: {
+          1: 12,
+          2: 4
+        },
+        name: "레드팀 3픽"
       },
-      4:{
-        pickChampId:81,
-        banChampId:429,
-        spells:{
-          1:1,
-          2:4
+      4: {
+        pick: {
+          id: 110,
+          isDoing: false
         },
-        name:"블루팀 4픽"
+        ban: {
+          id: 18,
+          isDoing: false
+        },
+        spells: {
+          1: 4,
+          2: 7
+        },
+        name: "레드팀 4픽"
       },
-      5:{
-        pickChampId:-1,
-        banChampId:3,
-        spells:{
-          1:3,
-          2:4
+      5: {
+        pick: {
+          id: 89,
+          isDoing: false
         },
-        name:"블루팀 5픽"
-      }
-    },
-    red:{
-      name:"레드팀 이름",
-      1:{
-        pickChampId:84,
-        banChampId:77,
-        spells:{
-          1:12,
-          2:4
+        ban: {
+          id: -1,
+          isDoing: true
         },
-        name:"abcdefghijklmnop"
-      },
-      2:{
-        pickChampId:120,
-        banChampId:147,
-        spells:{
-          1:11,
-          2:6
+        spells: {
+          1: 14,
+          2: 4
         },
-        name:"레드팀 2픽"
-      },
-      3:{
-        pickChampId:142,
-        banChampId:201,
-        spells:{
-          1:12,
-          2:4
-        },
-        name:"레드팀 3픽"
-      },
-      4:{
-        pickChampId:110,
-        banChampId:18,
-        spells:{
-          1:4,
-          2:7
-        },
-        name:"레드팀 4픽"
-      },
-      5:{
-        pickChampId:89,
-        banChampId:-1,
-        spells:{
-          1:14,
-          2:4
-        },
-        name:"레드팀 5픽"
+        name: "레드팀 5픽"
       }
     }
   })
