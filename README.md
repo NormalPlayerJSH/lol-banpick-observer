@@ -18,4 +18,4 @@ Electron으로 만들 생각이고,
 controller 폴더에서 npm run getreact 후 npm run start
 
 현재 진행 상황
-![현재진행상황](./now.gif)
+![현재진행상황](https://user-images.githubusercontent.com/37856995/114273642-dd433900-9a55-11eb-995a-c9c4f4383c48.gif)
