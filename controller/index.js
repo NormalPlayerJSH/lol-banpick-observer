@@ -174,10 +174,15 @@ let dataToSend={
   }
 var express = require("express");
 var expressApp = express();
+
 expressApp.get('/data',(req,res)=>{
-    console.log('asdf')
     res.status(200).json(dataToSend)
 })
+
+expressApp.use(express.static(path.join(__dirname, 'show')));
+expressApp.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname+'/show/index.html'));
+  });
 
 function createWindow () {
   const win = new BrowserWindow({
