@@ -4,13 +4,87 @@
     <meta charset="UTF-8">
     <title>Hello World!</title>
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
-<body style="background: white;">
-    <h1>Hello World!</h1>
-    <p>
-        We are using Node.js <span id="node-version"></span>,
-        Chromium <span id="chrome-version"></span>,
-        and Electron <span id="electron-version"></span>.
-    </p>
+<body class="alert-secondary">
+    <br>
+    <br>
+    <div class="container">
+        <div class="col align-items-center text-center text-success">
+            <div class="form-check form-switch form-check-inline">
+                <input class="form-check-input" type="checkbox" id="userName" checked>
+                <label class="form-check-label" for="userName">플레이어 닉네임 표시</label>
+            </div>
+            <div class="form-check form-switch form-check-inline">
+                <input class="form-check-input" type="checkbox" id="spells" checked>
+                <label class="form-check-label" for="spells">소환사 주문 표시</label>
+            </div>
+            <div class="form-check form-switch form-check-inline">
+                <input class="form-check-input" type="checkbox" id="champName" checked>
+                <label class="form-check-label" for="champName">챔피언 이름 표시</label>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col text-primary">
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="blue-0" placeholder="블루팀 팀명">
+                    <label for="blue-0">블루팀 팀명</label>
+                </div>
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="blue-1" placeholder="블루팀 1픽 닉네임">
+                    <label for="blue-1">블루팀 1픽 닉네임</label>
+                </div>
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="blue-2" placeholder="블루팀 2픽 닉네임">
+                    <label for="blue-2">블루팀 2픽 닉네임</label>
+                </div>
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="blue-3" placeholder="블루팀 3픽 닉네임">
+                    <label for="blue-3">블루팀 3픽 닉네임</label>
+                </div>
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="blue-4" placeholder="블루팀 4픽 닉네임">
+                    <label for="blue-4">블루팀 4픽 닉네임</label>
+                </div>
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="blue-5" placeholder="블루팀 5픽 닉네임">
+                    <label for="blue-5">블루팀 5픽 닉네임</label>
+                </div>
+            </div>
+            <div class="col text-danger">
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="red-0" placeholder="레드팀 팀명">
+                    <label for="red-0">레드팀 팀명</label>
+                </div>
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="red-1" placeholder="레드팀 1픽 닉네임">
+                    <label for="red-1">레드팀 1픽 닉네임</label>
+                </div>
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="red-2" placeholder="레드팀 2픽 닉네임">
+                    <label for="red-2">레드팀 2픽 닉네임</label>
+                </div>
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="red-3" placeholder="레드팀 3픽 닉네임">
+                    <label for="red-3">레드팀 3픽 닉네임</label>
+                </div>
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="red-4" placeholder="레드팀 4픽 닉네임">
+                    <label for="red-4">레드팀 4픽 닉네임</label>
+                </div>
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="red-5" placeholder="레드팀 5픽 닉네임">
+                    <label for="red-5">레드팀 5픽 닉네임</label>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="col justify-content-center text-center">
+            <button type="button" class="btn btn-success" id='apply'>적용</button>
+            <br>
+            <!-- <div class="text-center" id="console">HELLO</div> -->
+        </div>
+    </div>
 </body>
 </html>

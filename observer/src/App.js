@@ -14,7 +14,9 @@ function App() {
       remainTime: 10
     },
     "blue": {
-      name: "블루팀 이름",
+      0: {
+        name: "블루팀 이름"
+      },
       1: {
         pick: {
           id: 150,
@@ -92,7 +94,9 @@ function App() {
       }
     },
     red: {
-      name: "레드팀 이름",
+      0: {
+        name: "레드팀 이름"
+      },
       1: {
         pick: {
           id: 84,
