@@ -174,7 +174,8 @@ let dataToSend={
   }
 var express = require("express");
 var expressApp = express();
-expressApp.get('/',(req,res)=>{
+expressApp.get('/data',(req,res)=>{
+    console.log('asdf')
     res.status(200).json(dataToSend)
 })
 

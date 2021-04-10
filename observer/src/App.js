@@ -1,7 +1,8 @@
 import ScoreBoard from "./components/ScoreBoard"
 import BanPick from "./components/BanPick"
 import './App.css';
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import axios from 'axios'
 function App() {
   let [data, setData] = useState({
     common: {
@@ -174,6 +175,18 @@ function App() {
       }
     }
   })
+  useEffect(() => {
+    let a=setInterval(()=>{
+      axios.get('/data').then(
+        (res)=>{
+          setData(res.data)
+        }
+      )
+    },100)
+    return () => {
+      clearInterval(a)
+    }
+  }, [])
   return (
     <div className="App">
       <ScoreBoard></ScoreBoard>
