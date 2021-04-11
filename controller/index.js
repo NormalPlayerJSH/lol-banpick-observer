@@ -1,6 +1,13 @@
 const { app, BrowserWindow, ipcMain } = require('electron')
 const path = require('path')
 
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
+
+const request=require('request')
+
+const LCUConnector = require('lcu-connector');
+const connector = new LCUConnector();
+
 let dataToSend={
     common: {
       lang: "korean",
@@ -184,6 +191,58 @@ expressApp.get('*', (req, res) => {
     res.sendFile(path.join(__dirname+'/show/index.html'));
   });
 
+let link=''
+let isLCUConnected=false
+let nowInterval=-1
+
+connector.on('connect',(data)=>{
+    link=`https://riot:${data.password}@127.0.0.1:${data.port}`
+    isLCUConnected=true
+    console.log(data)
+    nowInterval=setInterval(()=>{
+        request(link+'/lol-champ-select/v1/session',(err,res,body)=>{
+            if(err) return
+            d=JSON.parse(body)
+            if(d.httpStatus==404) return
+            let cellToData={}
+            for(const team of ['myTeam','theirTeam']){
+                for (const [i,player] of d[team].entries()){
+                    let side=(team=='myTeam')?'blue':'red'
+                    let num=i+1
+                    cellToData[player.cellId]={side:side,num:num}
+                    playerData=dataToSend[side][num]
+                    playerData.pick.id=(player.championId==0)?-1:player.championId
+                    playerData.spells[1]=(player.spell1Id>100)?-1:player.spell1Id
+                    playerData.spells[2]=(player.spell2Id>100)?-1:player.spell2Id
+                }
+            }
+            let blueBanNum=1
+            let redBanNum=1
+            for(const actions of d.actions){
+                for(const action of actions){
+                    let {side,num}=cellToData[action.actorCellId]
+                    if(action.type=='pick'){
+                        //dataToSend[side][num]['pick']['id']=(action.championId==0)?-1:action.championId
+                        dataToSend[side][num]['pick']['isDoing']=action.isInProgress
+                    } else if(action.type=='ban'){
+                        let banNum=(side=='blue')?blueBanNum++:redBanNum++
+                        dataToSend[side][banNum]['ban']['id']=(action.championId==0)?-1:action.championId
+                        dataToSend[side][banNum]['ban']['isDoing']=action.isInProgress
+                    }
+                }
+            }
+            //console.log(JSON.stringify(dataToSend))
+        })
+        
+    },100)
+})
+
+connector.on('disconnect',()=>{
+    console.log('disconnect')
+    clearInterval(nowInterval)
+})
+
+
 function createWindow () {
   const win = new BrowserWindow({
     width: 800,
@@ -198,6 +257,7 @@ function createWindow () {
 
 app.whenReady().then(() => {
   createWindow()
+  connector.start()
   expressApp.listen(7777,()=>{
       console.log('Server Running')
   })
