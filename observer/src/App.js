@@ -10,12 +10,14 @@ function App() {
       show: {
         champName: true,
         userName: true,
-        spells: true
+        spells: true,
+        score: true
       },
       remainTime: 10
     },
     "blue": {
       0: {
+        score: 0,
         name: "블루팀 이름"
       },
       1: {
@@ -96,6 +98,7 @@ function App() {
     },
     red: {
       0: {
+        score: 0,
         name: "레드팀 이름"
       },
       1: {
@@ -176,13 +179,13 @@ function App() {
     }
   })
   useEffect(() => {
-    let a=setInterval(()=>{
+    let a = setInterval(() => {
       axios.get('/data').then(
-        (res)=>{
+        (res) => {
           setData(res.data)
         }
       )
-    },100)
+    }, 100)
     return () => {
       clearInterval(a)
     }
