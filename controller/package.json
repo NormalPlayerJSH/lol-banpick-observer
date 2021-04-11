@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron .",
-    "getreact": "npm run build --prefix ../observer && rm -rf show && mv ../observer/build ./show"
+    "getreact": "npm run build --prefix ../observer && rm -rf show && mv ../observer/build ./show",
+    "buildmac":"npm run getreact && electron-builder build --mac",
+    "buildwin":"npm run getreact && electron-builder build --win --ia32"
   },
   "author": "",
   "license": "ISC",
@@ -17,5 +19,15 @@
   "dependencies": {
     "electron-is-dev": "^2.0.0",
     "express": "^4.17.1"
+  },
+  "build":{
+    "productName":"LoL BanPick Observer",
+    "mac":{
+      "target":"dmg"
+    },
+    "win":{
+      "target":"portable"
+    }
+
   }
 }
