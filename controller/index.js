@@ -17,7 +17,7 @@ let dataToSend={
         spells: true,
         score: true
       },
-      remainTime: 10
+      endTime: -1
     },
     "blue": {
       0: {
@@ -210,6 +210,7 @@ connector.on('connect',(data)=>{
             d=JSON.parse(body)
             if(d.httpStatus==404){
                 if(!isReseted){
+                    dataToSend.common.endTimeTime=-1
                     for(const side of ['blue','red']){
                         for(const num of [1,2,3,4,5]){
                             let target=dataToSend[side][num]
@@ -252,6 +253,10 @@ connector.on('connect',(data)=>{
                     }
                 }
             }
+            dataToSend.common.endTime=parseInt(d.timer.internalNowInEpochMs)+parseInt(d.timer.adjustedTimeLeftInPhase)
+            //console.log(`${d.timer.adjustedTimeLeftInPhase} ${d.timer.internalNowInEpochMs} ${d.timer.totalTimeInPhase}`)
+            //console.log(parseInt(d.timer.internalNowInEpochMs)+parseInt(d.timer.adjustedTimeLeftInPhase))
+            //console.log(JSON.stringify(d))
             //console.log(JSON.stringify(dataToSend))
         })
         

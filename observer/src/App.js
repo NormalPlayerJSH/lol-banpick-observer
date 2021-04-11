@@ -13,7 +13,7 @@ function App() {
         spells: true,
         score: true
       },
-      remainTime: 10
+      endTime: -1
     },
     "blue": {
       0: {
@@ -192,7 +192,7 @@ function App() {
   }, [])
   return (
     <div className="App">
-      <ScoreBoard></ScoreBoard>
+      <ScoreBoard data={data}></ScoreBoard>
       <div className="banpicks">
         <BanPick side="blue" data={data}></BanPick>
         <BanPick side="red" data={data}></BanPick>
