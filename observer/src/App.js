@@ -1,6 +1,6 @@
 import ScoreBoard from "./components/ScoreBoard"
 import BanPick from "./components/BanPick"
-import './App.css';
+//import './App.css';
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 function App() {
