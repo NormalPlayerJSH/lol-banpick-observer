@@ -18,7 +18,7 @@ function ScoreBoard({data}){
             <div className="board-time">
                 <div className="board-time-border">
                     <div className="board-time-text">
-                        {(data.common.endTime==-1)?0:parseInt((data.common.endTime-Date.now())/1000)}
+                        {Math.max(0,parseInt((data.common.endTime-Date.now())/1000))}
                     </div>
                 </div>
             </div>
