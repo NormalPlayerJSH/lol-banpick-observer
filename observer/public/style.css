@@ -26,8 +26,103 @@ html,body,#root,.App{
 .scoreboard{
   width: 100%;
   height: 15%;
-  background-color: aqua;
+  background: linear-gradient(to right,#2A00D5,blue,red,#D80027);
 }
+
+.board-time{
+  width: 10%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.board-time-border{
+  width: 90%;
+  height: 85%;
+  justify-content: center;
+  align-items: center;
+  border: white;
+  border-width: 3px;
+  border-style: solid;
+  background-color: #00000060;
+}
+
+.board-time-text{
+  color: white;
+  font-size: 6rem;
+  font-weight: 800;
+}
+
+.board-team{
+  width: 45%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.board-team.board-red{
+  flex-direction: row-reverse;
+}
+
+.board-team-name{
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.use-score .board-team-name{
+  width: 80%;
+}
+
+.board-team-name-text{
+  color: white;
+  font-weight: 800;
+  font-size: 4rem;
+}
+
+.board-team-score{
+  display: none;
+  width: 0;
+}
+
+.use-score .board-team-score{
+  display: flex;
+  width: 20%;
+  height: 100%;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.use-score .board-red .board-team-score{
+  justify-content: flex-start;
+}
+
+.use-score .board-team-score-border{
+  width: 80%;
+  height: 70%;
+  justify-content: center;
+  align-items: center;
+  border: white;
+  border-width: 3px;
+  border-style: solid;
+  background-color: #00000060;
+}
+
+.use-score .board-team-score-text{
+  color: white;
+  font-weight: 800;
+  font-size: 5rem;
+}
+/*
+.board-team.board-blue{
+  background-color: blue;
+}
+
+.board-team.board-red{
+  background-color: red;
+}
+*/
 
 .banpicks{
   width: 100%;
