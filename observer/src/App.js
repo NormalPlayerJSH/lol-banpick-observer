@@ -18,165 +18,165 @@ function App() {
     "blue": {
       0: {
         score: 0,
-        name: "블루팀 이름"
+        name: ""
       },
       1: {
         pick: {
-          id: 150,
+          id: -1,
           isDoing: false
         },
         ban: {
-          id: 235,
+          id: -1,
           isDoing: false
         },
         spells: {
-          1: 12,
-          2: 4
+          1: -1,
+          2: -1
         },
-        name: "일이삼사오육칠팔"
+        name: ""
       },
       2: {
         pick: {
-          id: 106,
+          id: -1,
           isDoing: false
         },
         ban: {
-          id: 412,
+          id: -1,
           isDoing: false
         },
         spells: {
-          1: 11,
-          2: 4
+          1: -1,
+          2: -1
         },
-        name: "블루팀 2픽"
+        name: ""
       },
       3: {
         pick: {
-          id: 61,
+          id: -1,
           isDoing: false
         },
         ban: {
-          id: 4,
+          id: -1,
           isDoing: false
         },
         spells: {
-          1: 12,
-          2: 4
+          1: -1,
+          2: -1
         },
-        name: "블루팀 3픽"
+        name: ""
       },
       4: {
         pick: {
-          id: 81,
-          isDoing: true
+          id: -1,
+          isDoing: false
         },
         ban: {
-          id: 429,
+          id: -1,
           isDoing: false
         },
         spells: {
-          1: 1,
-          2: 4
+          1: -1,
+          2: -1
         },
-        name: "블루팀 4픽"
+        name: ""
       },
       5: {
         pick: {
           id: -1,
-          isDoing: true
+          isDoing: false
         },
         ban: {
-          id: 3,
+          id: -1,
           isDoing: false
         },
         spells: {
-          1: 3,
-          2: 4
+          1: -1,
+          2: -1
         },
-        name: "블루팀 5픽"
-      }
+        name: ""
+      },
     },
     red: {
-      0: {
-        score: 0,
-        name: "레드팀 이름"
-      },
-      1: {
-        pick: {
-          id: 84,
-          isDoing: false
+        0: {
+          score: 0,
+          name: ""
         },
-        ban: {
-          id: 77,
-          isDoing: false
+        1: {
+          pick: {
+            id: -1,
+            isDoing: false
+          },
+          ban: {
+            id: -1,
+            isDoing: false
+          },
+          spells: {
+            1: -1,
+            2: -1
+          },
+          name: ""
         },
-        spells: {
-          1: 12,
-          2: 4
+        2: {
+          pick: {
+            id: -1,
+            isDoing: false
+          },
+          ban: {
+            id: -1,
+            isDoing: false
+          },
+          spells: {
+            1: -1,
+            2: -1
+          },
+          name: ""
         },
-        name: "abcdefghijklmnop"
-      },
-      2: {
-        pick: {
-          id: 120,
-          isDoing: false
+        3: {
+          pick: {
+            id: -1,
+            isDoing: false
+          },
+          ban: {
+            id: -1,
+            isDoing: false
+          },
+          spells: {
+            1: -1,
+            2: -1
+          },
+          name: ""
         },
-        ban: {
-          id: 147,
-          isDoing: false
+        4: {
+          pick: {
+            id: -1,
+            isDoing: false
+          },
+          ban: {
+            id: -1,
+            isDoing: false
+          },
+          spells: {
+            1: -1,
+            2: -1
+          },
+          name: ""
         },
-        spells: {
-          1: 11,
-          2: 6
+        5: {
+          pick: {
+            id: -1,
+            isDoing: false
+          },
+          ban: {
+            id: -1,
+            isDoing: false
+          },
+          spells: {
+            1: -1,
+            2: -1
+          },
+          name: ""
         },
-        name: "레드팀 2픽"
-      },
-      3: {
-        pick: {
-          id: 142,
-          isDoing: false
-        },
-        ban: {
-          id: 201,
-          isDoing: false
-        },
-        spells: {
-          1: 12,
-          2: 4
-        },
-        name: "레드팀 3픽"
-      },
-      4: {
-        pick: {
-          id: 110,
-          isDoing: false
-        },
-        ban: {
-          id: 18,
-          isDoing: false
-        },
-        spells: {
-          1: 4,
-          2: 7
-        },
-        name: "레드팀 4픽"
-      },
-      5: {
-        pick: {
-          id: 89,
-          isDoing: false
-        },
-        ban: {
-          id: -1,
-          isDoing: true
-        },
-        spells: {
-          1: 14,
-          2: 4
-        },
-        name: "레드팀 5픽"
       }
-    }
   })
   useEffect(() => {
     let a = setInterval(() => {
