@@ -210,7 +210,7 @@ connector.on('connect',(data)=>{
             d=JSON.parse(body)
             if(d.httpStatus==404){
                 if(!isReseted){
-                    dataToSend.common.endTimeTime=-1
+                    dataToSend.common.endTime=-1
                     for(const side of ['blue','red']){
                         for(const num of [1,2,3,4,5]){
                             let target=dataToSend[side][num]
@@ -303,12 +303,14 @@ app.on('window-all-closed', () => {
 
 ipcMain.on('controller_info',(e,payload)=>{
     console.log(payload)
-    for (const type of ['userName','spells','champName']){
+    for (const type of ['score','userName','spells','champName']){
         dataToSend.common.show[type]=payload[type]
     }
     for (const side of ['blue','red']){
-        for(const pick of [0,1,2,3,4,5]){
+        for(const pick of [1,2,3,4,5]){
             dataToSend[side][pick].name=payload[side][pick]
         }
+        dataToSend[side][0].name=payload[side]['name']
+        dataToSend[side][0].score=payload[side]['score']
     }
 })

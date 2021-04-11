@@ -12,6 +12,10 @@
     <div class="container">
         <div class="col align-items-center text-center text-success">
             <div class="form-check form-switch form-check-inline">
+                <input class="form-check-input" type="checkbox" id="score" checked>
+                <label class="form-check-label" for="score">각 팀 점수 표시</label>
+            </div>
+            <div class="form-check form-switch form-check-inline">
                 <input class="form-check-input" type="checkbox" id="userName" checked>
                 <label class="form-check-label" for="userName">플레이어 닉네임 표시</label>
             </div>
@@ -27,9 +31,15 @@
         <br>
         <div class="row">
             <div class="col text-primary">
+                <div class="input-group">
+                    <span class="input-group-text" id="basic-addon1">블루팀 점수</span>
+                    <button type="button" class="btn btn-primary" id="blue-minus">-</button>
+                    <span class="input-group-text" id="blue-score">0</span>
+                    <button type="button" class="btn btn-primary" id="blue-plus">+</button>
+                </div>
                 <div class="form-floating">
-                    <input type="text" class="form-control" id="blue-0" placeholder="블루팀 팀명">
-                    <label for="blue-0">블루팀 팀명</label>
+                    <input type="text" class="form-control" id="blue-name" placeholder="블루팀 팀명">
+                    <label for="blue-name">블루팀 팀명</label>
                 </div>
                 <div class="form-floating">
                     <input type="text" class="form-control" id="blue-1" placeholder="블루팀 1픽 닉네임">
@@ -53,8 +63,14 @@
                 </div>
             </div>
             <div class="col text-danger">
+                <div class="input-group">
+                    <span class="input-group-text" id="basic-addon1">레드팀 점수</span>
+                    <button type="button" class="btn btn-danger" id="red-minus">-</button>
+                    <span class="input-group-text" id="red-score">0</span>
+                    <button type="button" class="btn btn-danger" id="red-plus">+</button>
+                </div>
                 <div class="form-floating">
-                    <input type="text" class="form-control" id="red-0" placeholder="레드팀 팀명">
+                    <input type="text" class="form-control" id="red-name" placeholder="레드팀 팀명">
                     <label for="red-0">레드팀 팀명</label>
                 </div>
                 <div class="form-floating">
