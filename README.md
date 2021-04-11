@@ -13,9 +13,13 @@ Electron으로 만들 생각이고,
 
 서버에서 받아와서 보여질 화면에 띄우는 거 구현 완료
 
-이제 실제 롤 클라와 통신할 것만 남음
+일렉트론에서 롤 클라와 통신 후 Express로 보여질 화면에 JSON 형태로 전송함
+
+롤 클라와 연동까지 완료
+
+자잘한 구현 (팀명, 점수 등 보여주기)만 남음
 
 controller 폴더에서 npm run getreact 후 npm run start
 
-현재 진행 상황
-![현재진행상황](https://user-images.githubusercontent.com/37856995/114273642-dd433900-9a55-11eb-995a-c9c4f4383c48.gif)
+현재 진행 상황 (OBS에서 브라우저 소스로 넣어 녹화한 것)
+![현재진행상황](https://user-images.githubusercontent.com/37856995/114304816-32dc1c00-9b10-11eb-9cd2-996cb5d809f5.gif)
