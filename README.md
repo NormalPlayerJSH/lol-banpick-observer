@@ -10,6 +10,7 @@ Used React for page to show.
 
 ## Preference Window
 ![세팅창](https://user-images.githubusercontent.com/37856995/115122571-81e3ee80-9ff3-11eb-8c15-d068c34425df.png)
+ (Toggle Buttons: Show Team Score, Nickname, Spells, Champion Name)
 
 Used HTML(with Bootstrap) + Electron
 
