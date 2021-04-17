@@ -14,12 +14,12 @@ Used React for page to show.
 Used HTML(with Bootstrap) + Electron
 
 ## How does it run
- - App is started
- - Electron and Express is started
-  - Express
-   - Checks for LeagueClient using LCU Connecter
-   - Serves the page to show
-   - Sends the ban/pick data to the page to show as JSON
-  - Electron
-   - Makes preference window
-   - Updates the settings when it changed and let express know
+- App is started
+- Electron and Express is started
+    - Express
+        - Checks for LeagueClient using LCU Connecter
+        - Serves the page to show
+        - Sends the ban/pick data to the page to show as JSON
+    - Electron
+        - Makes preference window
+        - Updates the settings when it changed and let express know
