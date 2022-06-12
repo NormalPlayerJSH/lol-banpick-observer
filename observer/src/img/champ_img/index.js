@@ -152,6 +152,13 @@ import Pyke from './afterCrop/Pyke.jpg'
 import Yone from './afterCrop/Yone.jpg'
 import Sett from './afterCrop/Sett.jpg'
 import Lillia from './afterCrop/Lillia.jpg'
+import Akshan from './afterCrop/Akshan.jpg'
+import Belveth from './afterCrop/Belveth.jpg'
+import Zeri from './afterCrop/Zeri.jpg'
+import Vex from './afterCrop/Vex.jpg'
+import Gwen from './afterCrop/Gwen.jpg'
+import Renata from './afterCrop/Renata.jpg'
+// import Lillia from './afterCrop/Lillia.jpg'
 
 let champs={
     None:Annie,
@@ -274,9 +281,12 @@ let champs={
     Velkoz:Velkoz,
     Taliyah:Taliyah,
     Camille:Camille,
+    Akshan:Akshan,
+    Belveth:Belveth,
     Braum:Braum,
     Jhin:Jhin,
     Kindred:Kindred,
+    Zeri:Zeri,
     Jinx:Jinx,
     TahmKench:TahmKench,
     Viego:Viego,
@@ -306,9 +316,12 @@ let champs={
     Aphelios:Aphelios,
     Rell:Rell,
     Pyke:Pyke,
+    Vex:Vex,
     Yone:Yone,
     Sett:Sett,
     Lillia:Lillia,
+    Gwen:Gwen,
+    Renata:Renata,
 }
 
 export default champs;
